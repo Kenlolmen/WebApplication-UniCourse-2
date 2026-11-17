@@ -26,10 +26,10 @@
                 <td>{{ measurement.pressure }}</td>
                 <td>
                     {% if is_granted('ROLE_MEASUREMENT_SHOW') %}
-                    <a href="{{ path('app_measurement_show') }}">show</a>
+                    <a href="{{ path('app_measurement_show', {'id': measurement.id}) }}">show</a>
                     {% endif %}
                     {% if is_granted('ROLE_MEASUREMENT_EDIT') %}
-                    <a href="{{ path('app_measurement_edit') }}">edit</a>
+                    <a href="{{ path('app_measurement_edit', {'id': measurement.id}) }}">edit</a>
                     {% endif %}
                 </td>
             </tr>
