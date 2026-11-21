@@ -30,6 +30,11 @@ class Measurement
     #[ORM\Column]
     private ?int $pressure = null;
 
+    public function getFahrenheit(): float
+    {
+        return ($this->getCelsius() * 9 / 5) + 32;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
